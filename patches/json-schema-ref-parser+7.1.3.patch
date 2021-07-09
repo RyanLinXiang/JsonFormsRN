@@ -1,0 +1,14 @@
+diff --git a/node_modules/json-schema-ref-parser/lib/resolvers/http.js b/node_modules/json-schema-ref-parser/lib/resolvers/http.js
+index 5dc88c5..7b08aa5 100644
+--- a/node_modules/json-schema-ref-parser/lib/resolvers/http.js
++++ b/node_modules/json-schema-ref-parser/lib/resolvers/http.js
+@@ -1,7 +1,7 @@
+ "use strict";
+ 
+-const http = require("http");
+-const https = require("https");
++const http = require("react-native-http");
++const https = require("react-native-http");
+ const { ono } = require("ono");
+ const url = require("../util/url");
+ 

@@ -1,0 +1,102 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2017,
+        "project": "./tsconfig.json",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": ["@typescript-eslint", "jest", "prettier", "import", "react"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jest/recommended",
+        "prettier",
+        "plugin:prettier/recommended",
+        "prettier/@typescript-eslint",
+        "prettier/prettier",
+        "prettier/react",
+        "prettier/@typescript-eslint"
+    ],
+    "env": {
+        "node": true,
+        "commonjs": true,
+        "es6": true,
+        "jest/globals": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "ignorePatterns": [
+        "node_modules",
+        "dist",
+        "jest.config.js",
+        "**/typings/**",
+        "**/*.d.ts"
+    ],
+    "rules": {
+        "react/prop-types": "warn",
+        "react/display-name": "warn",
+        "react/jsx-key": "warn",
+        "@typescript-eslint/no-floating-promises": "warn",
+        "import/no-deprecated": "off",
+        "curly": "error",
+        "eqeqeq": "warn",
+        "no-shadow": "off",
+        "no-else-return": "warn",
+        "object-shorthand": "warn",
+        "prefer-rest-params": "error",
+        "no-prototype-builtins": "error",
+        "import/prefer-default-export": "warn",
+        "import/extensions": "off",
+        "import/no-duplicates": "off",
+        "prefer-template": "error",
+        "radix": ["error", "as-needed"],
+        "complexity": ["warn", 5],
+        "max-lines-per-function": [
+            "warn",
+            { "max": 25, "skipBlankLines": true, "skipComments": true }
+        ],
+        "prefer-destructuring": [
+            "error",
+            {
+                "VariableDeclarator": { "array": false, "object": true },
+                "AssignmentExpression": { "array": false, "object": false }
+            },
+            { "enforceForRenamedProperties": false }
+        ],
+        "padding-line-between-statements": [
+            "error",
+            { "blankLine": "always", "prev": ["block-like"], "next": "*" },
+            { "blankLine": "always", "prev": "*", "next": "return" }
+        ],
+
+        "@typescript-eslint/no-shadow": "error",
+        "@typescript-eslint/ban-ts-comment": "warn",
+        "@typescript-eslint/no-this-alias": "warn",
+        "@typescript-eslint/no-var-requires": "warn",
+        "@typescript-eslint/no-empty-function": "error",
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "vars": "all",
+                "args": "none",
+                "ignoreRestSiblings": true
+            }
+        ],
+        "@typescript-eslint/no-explicit-any": [
+            "warn",
+            { "ignoreRestArgs": true }
+        ],
+        "@typescript-eslint/no-useless-constructor": ["error"],
+        "@typescript-eslint/ban-types": "error",
+
+        "react/no-string-refs": "error",
+        "react/jsx-curly-brace-presence": "error"
+    }
+}
